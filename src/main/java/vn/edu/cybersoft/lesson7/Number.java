@@ -40,14 +40,24 @@ public class Number {
                 + this.maxNum(this.soNguyenArr)
                 + " va vi tri cua no trong mang la "
                 + this.findNumber(this.soNguyenArr, maxNum));
-        System.out.println("So nguyen am dau tien la "
-                + this.isNegative(this.soNguyenArr)
-                + " va vi tri cua no trong mang la "
-                + this.findNumber(this.soNguyenArr, firstNegativeNum));
-        System.out.println("So nguyen am lon nhat la "
-                + this.maxNegativeNum(this.soNguyenArr)
-                + " va vi tri cua no trong mang la "
-                + this.findNumber(this.soNguyenArr, maxNegativeNum));
+        // check so nguyen am dau tien
+        if (this.isNegative(this.soNguyenArr).equals(NO_EXIST)){
+            System.out.println("Khong co so nguyen am trong mang");
+        } else {
+            System.out.println("So nguyen am dau tien la "
+                    + this.isNegative(this.soNguyenArr)
+                    + " va vi tri cua no trong mang la "
+                    + this.findNumber(this.soNguyenArr, firstNegativeNum));
+        }
+        // check so nguyen am lon nhat
+        if (this.maxNegativeNum(this.soNguyenArr).equals(NO_EXIST)){
+            System.out.println("Khong co so nguyen am trong mang");
+        } else {
+            System.out.println("So nguyen am lon nhat la "
+                    + this.maxNegativeNum(this.soNguyenArr)
+                    + " va vi tri cua no trong mang la "
+                    + this.findNumber(this.soNguyenArr, maxNegativeNum));
+        }
         System.out.println("Tong cac so nguyen duong: " + this.sumArr(this.soNguyenArr));
         System.out.println("So luong so nguyen am: " + this.numberOfNegativeNum(this.soNguyenArr));
         System.out.println("Tong cac so nguyen am: " + this.sumNegativeNum(this.soNguyenArr));
